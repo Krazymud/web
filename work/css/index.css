@@ -1,0 +1,96 @@
+@font-face{
+    font-family: GothamRounded;
+    src: url(../font/gothamrounded.otf);
+}
+
+body{
+    font-size: 12px;
+    font-family: GothamRounded;
+    text-align: center;
+}
+
+.header{
+    font-size: 4.0em;
+    color: #FFF;
+}
+
+.header a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bolder
+}
+
+.introimg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.navigation_menu{
+    text-align: center;
+    
+}
+
+.navigation_menu
+ul {
+    display: inline-block;
+}
+
+.navigation_menu
+li{
+    float: left;
+    list-style: none;
+}
+
+.navigation_menu 
+li + li{
+    margin-left: 150px;
+}
+
+.navigation_menu
+a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.5em;
+}
+
+h1{
+    margin-top: 400px;
+    font-size: 3.0em;
+}
+
+hr{
+    height: 10px;
+    width: 150px;
+    border: none;
+    background-color: #846C60;
+}
+
+.navigation_menu
+a:hover{ 
+background-color: #17A68A;
+opacity: 0.8;
+}
+
+.button{
+    background-color: #17A68A;
+    border: 1.5px solid #17A68A;
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.button:hover{
+    background-color: white; /* Green */
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
