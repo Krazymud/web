@@ -56,9 +56,13 @@ a{
     font-size: 1.5em;
 }
 
-h1{
+#maintext h1{
     margin-top: 400px;
     font-size: 3.0em;
+}
+
+#maintext h3{
+    font-size: 2.0em;
 }
 
 hr{
@@ -94,3 +98,31 @@ opacity: 0.8;
     color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+#split{
+    margin-top: 80px;
+}
+
+#footer{
+    margin-top: 80px;
+    height: 200px;
+    background-color: antiquewhite; 
+    left: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.7;
+}
+.social-links{
+    position: absolute;
+    margin-left: 36.7%;
+}
+
+.social-links li{
+    display: inline-block;
+    list-style: none;
+}
+
+.social-links li + li{
+    margin-left: 50px;
+}
+
