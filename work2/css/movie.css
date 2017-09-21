@@ -1,7 +1,7 @@
 body{
     font-size: 8pt;
     font-family: Verdana, Tahoma, sans-serif;
-    background-image: url(img/background.png);
+    background-image: url(../img/background.png);
     background-repeat: repeat;
     text-align: center;
     padding: 0;
@@ -10,7 +10,7 @@ body{
 
 #banner{
     height: 50px;
-    background-image: url(img/bannerbackground.png);
+    background-image: url(../img/bannerbackground.png);
     
 }
 
@@ -63,7 +63,7 @@ body{
 }
 
 #status{
-    background-image: url(img/rottenbackground.png);
+    background-image: url(../img/rottenbackground.png);
     height: 83px;
     color: white;
     text-align: left;
@@ -100,6 +100,7 @@ body{
     text-align: left;
     background-color: #E1D697;
     padding: 8px;
+    min-height: 25px;
 }
 
 .critic{
@@ -120,5 +121,7 @@ body{
     margin: 0;
 }
 
-
+.critic .author{
+    font-style: italic;
+}
 
