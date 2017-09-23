@@ -70,7 +70,7 @@ body{
 }
 
 #status img{
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
 #link{
@@ -106,6 +106,7 @@ body{
 .critic{
     text-align: left;
     margin-bottom: 3em;
+    overflow: hidden;
 }
 
 .critic img{
