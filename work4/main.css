@@ -1,0 +1,30 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#frame{
+    border: solid 2px black;
+    width: 550px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#input{
+    margin-top:10px;
+}
+
+#cal{
+    width: 95%;
+    border: solid 2px;
+    height: 40px;
+    font-size: 30px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    margin: 12px 10px 5px 10px;
+}
