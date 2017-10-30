@@ -1,0 +1,74 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.split{
+    margin-bottom: 10px;
+}
+#change{
+    display: inline-block;
+}
+#time{
+    display: inline;
+    margin-left: 80px;
+}
+#scoring{
+    display: inline;
+    margin-left: 100px;
+}
+button{
+    background-color: white;
+    font: 1em bold;
+    border: solid #E4E4E4;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+button:active{
+    background: linear-gradient(rgb(228, 228, 228), white, rgb(228, 228, 228));
+}
+#tip{
+    display: inline-block;
+}
+#tip .mess{
+    border: solid #E4E4E4;
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+}
+#timer, #score{
+    border: solid #E4E4E4;
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+}
+#game{
+    width: 300px;
+    margin: 0 auto;
+}
+.mole{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.line{
+    width: 300px;
+    margin-top: 10px;
+    background-color: grey;
+    height: 1px;
+}
+#instruction{
+    margin: 0 auto;
+    width: 700px;
+}
+#instruction ol li{
+    text-align: left;
+    height: 40px;
+}
+#instruction h3{
+    text-align: left;
+}
+
+
+

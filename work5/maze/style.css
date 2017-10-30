@@ -1,0 +1,26 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#container{
+    width: 530px;
+    height: 330px;
+    margin: 0 auto;
+}
+
+#guidance{
+    font-size: 1.5em;
+}
+
+p{
+    height: 20px;
+}
+
+#demo{
+    margin: 0 auto;
+    width: 100px;
+    height: 40px;
+}
