@@ -23,17 +23,19 @@ function tip_change(event){
     var x = event.clientX - canvas.offsetLeft;
     var y = event.clientY - canvas.offsetTop;
     if(x >= 3 && x <= 47 && y >= 211 && y <= 255) {
+        tip.className = 'n_opa';
         tip.innerHTML = 'Show your move';
         isinS = 1;
         isinE = 0;
         sign = 0;
     }
     else if(x >= 480 && x <= 524 && y >= 211 && y <= 255){
+        tip.className = 'n_opa';
         if(sign == 1)
             return;
         else {
             if (isinS == 1)
-                tip.innerHTML = 'Great move';
+                tip.innerHTML = 'You win!';
             else
                 tip.innerHTML = 'Don\'t cheat, you should start ' +
                     'from the \'S\' and move to the \'E\' inside the maze!';
@@ -47,6 +49,7 @@ function tip_change(event){
             if((x >= 3 && x <= 524 && y >= 3 && y <= 83) ||
                 (x >= 3 && x <= 172 && y >= 83 && y <= 203) ||
                 (x >= 356 && x <= 524 && y >= 83 && y <= 203)){
+                tip.className = 'n_opa';
                 var line = canvas.getContext('2d');
                 line.strokeStyle = '#000';
                 line.fillStyle = 'red';
@@ -68,6 +71,7 @@ function tip_change(event){
             }
             else if((x >= 3 && x <= 524 && y >= 263 && y <= 323) ||
                 (x >= 232 && x <= 295 && y >= 143 && y <= 263)){
+                tip.className = 'n_opa';
                 var line = canvas.getContext('2d');
                 line.strokeStyle = '#000';
                 line.fillStyle = 'red';
@@ -88,6 +92,7 @@ function tip_change(event){
                 sign = 1;
             }
             else {
+                tip.className = 'opa';
                 draw();
                 if(sign == 1)
                     isinS = 0;

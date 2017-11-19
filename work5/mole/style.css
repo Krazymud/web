@@ -37,7 +37,10 @@ button:active{
     width: 180px;
     text-align: left;
 }
-#timer, #score{
+#timer{
+    border: solid black 1px;
+}
+#score{
     border: solid #E4E4E4;
     display: inline-block;
     width: 50px;
@@ -69,6 +72,8 @@ button:active{
 #instruction h3{
     text-align: left;
 }
+
+
 
 
 

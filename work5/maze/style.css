@@ -5,6 +5,16 @@ html, body{
     margin: 0 auto;
 }
 
+.n_opa{
+    opacity: 1;
+    transition: all 1s;
+}
+
+.opa{
+    opacity: 0;
+    transition: all 1s;
+}
+
 #container{
     width: 530px;
     height: 330px;

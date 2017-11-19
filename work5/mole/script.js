@@ -4,8 +4,8 @@ for(var n = 0; n < 60; n++){
     var obj = document.getElementById('game').appendChild(radios);
     obj.className = 'mole';
 }
-var time_left = 30.0;
-var time = 0;
+var time_left = 30;
+var time;
 var stop;
 var playing = 2;
 var random = 0;
@@ -43,6 +43,8 @@ window.onload = function(){
             }
         })(i));
     }
+    canvas = document.getElementById('timer');
+    drawTime();
 }
 
 function SwitchMode(){
@@ -50,7 +52,7 @@ function SwitchMode(){
         mess.innerHTML = 'Pausing';
         clearTimeout(time);
         clearTimeout(stop);
-        time_left += 1;
+        time_left += 0.25;
         playing = 0; //pause
     }
     else{
@@ -74,9 +76,20 @@ function MolePoking(){
 }
 
 function timecount(){
-    document.getElementById('timer').innerHTML = time_left;
-    time_left = time_left - 1;
-    time = setTimeout('timecount()', 1000);
+    drawTime();
+    time_left = time_left - 0.25;
+    time = setTimeout('timecount()', 250);
+}
+
+function drawTime(){
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = (time_left <= 5) ? 'red' : 'aquamarine';
+    ctx.clearRect(0,0,60,20);
+    ctx.fillRect(0,0,time_left * 2,20);
+    ctx.fillStyle = 'black';
+    ctx.font = "16px black";
+    ctx.textAlign = "center";
+    ctx.fillText(Math.floor(time_left).toString(), 28, 16);
 }
 
 function EndGame(){
@@ -92,4 +105,6 @@ function EndGame(){
     playing = 2;  //end
     mess.innerHTML = 'Game Over!';
     mess.style.color = 'red';
+    time_left = 30;
+    drawTime();
 }
