@@ -3,30 +3,40 @@ html, body{
     height: 100%;
     margin: 0 auto;
     text-align: center;
+    background-image: url(../img/bg.jpg);
 }
 
 #frame{
-    width: 600px;
+    width: 500px;
     height: 400px;
-    border: solid 2px;
-    margin: 0 auto;
+    margin: 50px auto;
+    border: solid 1px;
+    box-shadow: 4px 4px 5px #888888;
+    
 }
 p{
     font-size: small;
-    margin: 0;
-    color: red;
+    margin: 0 auto;
+    width: 200px;
+}
+input{
+    appearance: none;
+    border-radius: 4px;
+    border: 1px solid #c8cccf;
+    height: 20px;
+    font-size: 15px;
 }
 h2{
     height: 100px;
     margin: 0;
-    width: 600px;
+    width: 500px;
 }
 .input{
     height: 70px;
 }
 
 #inputArea{
-    width: 400px;
+    width: 300px;
     float: left;
     height: 300px;
 }
@@ -40,7 +50,7 @@ button{
     font-size: 1em;
     width: 100px;
     height: 40px;
-    background-color: #4285F7;
+    background-color: #2B2B2B;
     margin-top: 50px;
     border: none;
     color: white;

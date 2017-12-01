@@ -3,17 +3,20 @@ html, body{
     height: 100%;
     margin: 0 auto;
     text-align: center;
+    background-image: url(../img/bg.jpg);
 }
 #frame{
-    width: 600px;
+    width: 500px;
     height: 400px;
-    border: solid 2px;
-    margin: 0 auto;
+    border: solid 1px;
+    margin: 50px auto;
+    box-shadow: 4px 4px 5px #888888;
+    
 }
 h2{
     height: 70px;
     margin: 0;
-    width: 600px;
+    width: 500px;
 }
 #content{
     width: 380px;
@@ -27,7 +30,7 @@ button{
     width: 105px;
     height: 45px;
     margin-top: 40px;
-    background-color: #4285F7;
+    background-color: #2B2B2B;
     border: none;
     color: white;
     box-shadow: 4px 4px 5px #888888;

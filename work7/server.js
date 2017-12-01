@@ -83,14 +83,22 @@ let server = http.createServer(function(request, response) {
         else
             path = process.cwd() + request.url;
         console.log(path);
-        fs.readFile(path, 'utf-8', function (err, data) {
+        fs.readFile(path, function (err, data) {
             if (err) {
                 console.log(err);
             }
             else {
                 let type = path.substr(path.lastIndexOf('.') + 1);
-                response.writeHead(200, {"Content-Type": "text/" + type});
-                response.write(data);
+                console.log(type);
+                if(type === 'jpg')
+                	response.writeHead(200, {"Content-Type": "image/jpeg"});
+                else if(type === 'ico')
+                	response.writeHead(200, {"Content-Type": "image/icon"});
+                else
+                	response.writeHead(200, {"Content-Type": "text/" + type});
+                if (type === "text")
+                	response.write(data.toString());
+                else response.write(data, "binary");
                 response.end();
             }
         })
@@ -104,9 +112,9 @@ let server = http.createServer(function(request, response) {
                 "<head><meta charset=\"utf-8\">" +
                 "<script type=\"text/javascript\" src=\"node_modules/jquery/dist/jquery.min.js\"></script>" +
                 "<link href='css/user.css' type='text/css' rel='stylesheet'/>" +
+                "<link rel = 'Shortcut Icon' href='../favicon.ico>'" +
                 "</head> " +
-                "<body> " +
-                "<h1>详情</h1> " +
+                "<body> "  +
                 "<div id=\"frame\"> " +
                 "<h2>用户详情</h2> " +
                 "<div id=\"content\">" +
@@ -130,5 +138,5 @@ function isinstore(str){
     }
 }
 
-server.listen(80);
+server.listen(8000);
 console.log("Server is listening");

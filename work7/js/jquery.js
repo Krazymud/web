@@ -12,16 +12,20 @@ $('#clear').click(function(){
 $('input').focus(function(){
     switch(this.name){
         case 'username':
-            $('#in_user').html('');
+            $('#in_user').css('color', '#808080');
+            $('#in_user').html('用户名为6~18位英文字母、数字或下划线，且必须以英文字母开头');
             break;
         case 'number':
-            $('#in_num').html('');
+            $('#in_num').css('color', '#808080');
+            $('#in_num').html('学号为8位数字，且不能以0开头');
             break;
         case 'phone':
-            $('#in_phone').html('');
+            $('#in_phone').css('color', '#808080');
+            $('#in_phone').html('电话为11位数字，且不能以0开头');
             break;
         case 'email':
-            $('#in_email').html('');
+            $('#in_email').css('color', '#808080');
+            $('#in_email').html('邮箱应满足通用格式');
             break;
     }
 })
@@ -29,28 +33,44 @@ $('input').focus(function(){
 $('input').blur(function(){
         switch(this.name){
             case 'username':
-                if(username.test($(this).val()) === false)
+                if(username.test($(this).val()) === false){
+                    $('#in_user').css('color', 'red');
                     $('#in_user').html('用户名格式错误！');
-                else
+                }
+                else{
+                    $('#in_user').css('color', '#808080');
                     $('#in_user').html('√');
+                }
                 break;
             case 'number':
-                if(number.test($(this).val()) === false)
+                if(number.test($(this).val()) === false){
+                    $('#in_num').css('color', 'red');
                     $('#in_num').html('学号格式错误！');
-                else
+                }
+                else{
+                    $('#in_num').css('color', '#808080');
                     $('#in_num').html('√');
+                }
                 break;
             case 'phone':
-                if(phone.test($(this).val()) === false)
+                if(phone.test($(this).val()) === false){
+                    $('#in_phone').css('color', 'red');
                     $('#in_phone').html('电话号码格式错误！');
-                else
+                }
+                else{
+                    $('#in_phone').css('color', '#808080');
                     $('#in_phone').html('√');
+                }
                 break;
             case 'email':
-                if(email.test($(this).val()) === false)
+                if(email.test($(this).val()) === false){
+                    $('#in_email').css('color', 'red');
                     $('#in_email').html('邮箱格式错误！');
-                else
+                }
+                else{
+                    $('#in_email').css('color', '#808080');
                     $('#in_email').html('√');
+                }
                 break;
         }
 });
